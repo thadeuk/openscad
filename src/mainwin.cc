@@ -351,6 +351,7 @@ MainWindow::MainWindow(const QString &filename)
 	connect(this->fileActionExportAMF, SIGNAL(triggered()), this, SLOT(actionExportAMF()));
 	connect(this->fileActionExportDXF, SIGNAL(triggered()), this, SLOT(actionExportDXF()));
 	connect(this->fileActionExportSVG, SIGNAL(triggered()), this, SLOT(actionExportSVG()));
+    connect(this->fileActionExportCSGBin, SIGNAL(triggered()), this, SLOT(actionExportCSGBin()));
 	connect(this->fileActionExportCSG, SIGNAL(triggered()), this, SLOT(actionExportCSG()));
 	connect(this->fileActionExportImage, SIGNAL(triggered()), this, SLOT(actionExportImage()));
 	connect(this->designActionFlushCaches, SIGNAL(triggered()), this, SLOT(actionFlushCaches()));
@@ -2213,6 +2214,12 @@ void MainWindow::actionExportSVG()
 {
 	actionExport(FileFormat::SVG, "SVG", ".svg", 2);
 }
+
+void MainWindow::actionExportCSGBin()
+{
+    actionExport(FileFormat::CSGBIN, "CSG", ".csgb", 3);
+}
+
 
 void MainWindow::actionExportCSG()
 {

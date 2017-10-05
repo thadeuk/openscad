@@ -231,7 +231,8 @@ SOURCES += src/AST.cc \
            src/module.cc \
            src/UserModule.cc \
            src/annotation.cc \
-           src/assignment.cc
+           src/assignment.cc \
+    src/export_csgbin.cc
 
 # Comment parser
 FLEXSOURCES += src/comment_lexer.l
